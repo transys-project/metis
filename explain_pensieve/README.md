@@ -25,8 +25,9 @@ We provide the pre-trained DNN model at `models/pretrain_linear_reward.ckpt`. Yo
 
 ## Generate a decision tree with given data traces 
 
-``
+```
+mkdir decision_tree
 python main.py 100
-``
+```
 
 The decision tree could be found in `decision_tree` in the format of `.svg`.
