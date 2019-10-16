@@ -1,4 +1,4 @@
-# Copyright 2017-2018 MIT
+# Copyright 2018-2019 MIT
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,27 +12,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .rl import *
+from rl import *
 import sys
-from .dqn import *
-from .dt import *
-from .log import *
-from .pensieve_viper_env import *
-from ..pensieve_test.load_trace import *
+from dqn import *
+from dt import *
+from log import *
+from pensieve_viper_env import *
+from load_trace import *
 
-TRAIN_TRACES = './pensieve/pensieve_test/cooked_new_traces/'
+TRAIN_TRACES = './cooked_traces/'
 
 def learn_dt(leaf_nodes):
     # parameters
-    log_fname = './pensieve/pensieve_viper/pensieve_dt.log'
-    model_path = './pensieve/pensieve_test/models/pretrain_linear_reward.ckpt'
+    log_fname = './pensieve_dt.log'
+    model_path = './models/pretrain_linear_reward.ckpt'
     n_batch_rollouts = 10
     max_samples = 200000
     max_iters = 100
     train_frac = 0.8
     is_reweight = False
     n_test_rollouts = 50
-    save_dirname = './pensieve/pensieve_viper/decision_tree'
+    save_dirname = './decision_tree'
     save_fname = 'pensieve_dt_policy_' + leaf_nodes + '.pk'
     save_viz_fname = 'pensieve_dt_policy_' + leaf_nodes + '.svg'
     is_train = True
@@ -52,7 +52,7 @@ def learn_dt(leaf_nodes):
     parameters['PACKET_SIZE'] = 1500  # bytes
     parameters['NOISE_LOW'] = 0.9
     parameters['NOISE_HIGH'] = 1.1
-    parameters['VIDEO_SIZE_FILE'] = './pensieve/pensieve_test/video_size_'
+    parameters['VIDEO_SIZE_FILE'] = './video/video_size_'
     parameters['S_INFO'] = 6  # bit_rate, buffer_size, next_chunk_size, bandwidth_measurement(throughput and time), chunk_til_video_end
     parameters['S_LEN'] = 8  # take how many frames in the past
     parameters['A_DIM'] = 6
@@ -111,44 +111,6 @@ def learn_dt(leaf_nodes):
     rew = test_policy(env, student, n_test_rollouts, parameters)
     log('Final reward: {}'.format(rew), INFO)
     log('Number of nodes: {}'.format(student.tree.tree_.node_count), INFO)
-
-
-def to_state():
-        # TODO: extract states from the pensieve environment
-        pass
-
-
-def bin_acts():
-    # parameters
-    seq_len = 10
-    n_rollouts = 10
-    log_fname = 'pong_options.log'
-    model_path = 'model-atari-pong-1/saved'
-
-    # Logging
-    set_file(log_fname)
-
-    # Data structures
-    env = None  # TODO: update env
-    teacher = DQNPolicy(env, model_path)
-
-    # Action sequences
-    seqs = get_action_sequences(env, teacher, seq_len, n_rollouts)
-
-    for seq, count in seqs:
-        log('{}: {}'.format(seq, count), INFO)
-
-
-def print_size():
-    # parameters
-    dirname = 'results/run9'
-    fname = 'dt_policy.pk'
-
-    # Load decision tree
-    dt = load_dt_policy(dirname, fname)
-
-    # Size
-    print(dt.tree.tree_.node_count)
 
 
 if __name__ == '__main__':

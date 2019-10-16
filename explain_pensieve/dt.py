@@ -17,8 +17,8 @@ import pickle as pk
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
 from sklearn.externals.six import StringIO
-from .log import *
-from .ccp import *
+from log import *
+from ccp import *
 import pydotplus
 
 

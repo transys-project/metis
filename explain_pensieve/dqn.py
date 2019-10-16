@@ -11,13 +11,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from ..pensieve_test.a3c import *
-from .pensieve_viper_env import *
+from a3c import *
+from pensieve_viper_env import *
 import copy
 import math
-from .rl import *
+from rl import *
 import tensorflow as tf
-from .rl import *
 import tensorflow.contrib.layers as layers
 
 
