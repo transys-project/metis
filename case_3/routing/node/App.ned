@@ -1,0 +1,28 @@
+//
+// This file is part of an OMNeT++/OMNEST simulation example.
+//
+// Copyright (C) 1992-2015 Andras Varga
+//
+// This file is distributed WITHOUT ANY WARRANTY. See the file
+// `license' for details on this and other legal matters.
+//
+
+package node;
+
+//
+// Application model to generate traffic for the network.
+//
+simple App like IApp
+{
+    parameters:
+        int address;  // local node address
+        double measureInterval @unit(s) = default(1s);
+        double seed = uniform(0, 65535);
+        volatile int packetLength @unit(byte);  // length of one message (fixed! no "volatile" modifier)
+        @display("i=block/browser");
+    gates:
+        input in;
+        output out;
+}
+
+
