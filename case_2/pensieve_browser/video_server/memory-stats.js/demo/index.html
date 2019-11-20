@@ -1,0 +1,53 @@
+<!doctype html>
+
+<title>memory-stats.js demo</title>
+<script src="../memory-stats.js"></script>
+
+<body>
+<script>
+
+	// add the monitor into our page and update it on a rAF loop
+
+	var stats = new MemoryStats();
+	stats.domElement.style.position	= 'fixed';
+	stats.domElement.style.right		= '0px';
+	stats.domElement.style.bottom		= '0px';
+	document.body.appendChild( stats.domElement );
+
+
+	requestAnimationFrame(function rAFloop(){
+		stats.update();
+		requestAnimationFrame(rAFloop);
+	});
+	//# sourceURL=updateStats.js
+
+</script>
+<script>
+
+	// generate plenty of objects
+	// from in generational GC demo from firefox
+	// https://people.mozilla.org/~wmccloskey/incremental-blog/example-pause.html
+	var garbage 	= [];
+	var garbageSize	= 1024 * 1024 * 6;
+	var garbageIdx	= 0;
+
+	// call GC() from console to test a GC
+	function GC(){
+		garbage 	= [];
+		garbageIdx	= 0;
+	}
+
+	function makeGarbage(amount){
+		for(var i = 0; i < amount; i++){
+			garbage[garbageIdx]	= {};
+			garbageIdx	= (garbageIdx+1) % garbageSize;
+		}
+	}
+	requestAnimationFrame(function rAFloop(){
+		makeGarbage(1024);
+		requestAnimationFrame(rAFloop);
+	});
+
+	//# sourceURL=generateGarbage.js
+
+</script></body>
