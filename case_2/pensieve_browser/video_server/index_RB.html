@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Dash.js Rocks haha</title>
+    <script src="./memory-stats.js/bookmarklet.js"></script>
+</head>
+
+<body>
+    <div>
+        <video id="videoPlayer" controls="true"></video>
+    </div>
+    <div id="latency"></div>
+    <script src="dash.all.min.js"></script>
+    <script>
+        let url = "/Manifest.mpd";
+
+        let abr_algorithms = {
+            0: 'Default',
+            1: 'Fixed Rate (0)',
+            2: 'Buffer Based',
+            3: 'Rate Based',
+            4: 'RL',
+            5: 'Festive',
+            6: 'Bola',
+            7: 'Pensieve',
+            8: 'Viper'
+        };
+        let abr_id = 3;
+
+        if (abr_id in abr_algorithms) {
+            document.title = abr_algorithms[abr_id];
+        } else {
+            document.title = "Unknown ABR Algorithm";
+        }
+        
+        let latency_div = document.querySelector('#latency')
+        let text_node = document.createTextNode("Test for speed");
+        latency_div.appendChild(text_node);
+
+        let call_time = 0;
+        let average_latency = 0;
+        function latencyDisplayCallback(latency) {
+            average_latency = average_latency * (call_time) / (call_time + 1) + latency / (call_time + 1);
+            call_time = call_time + 1;
+            text_node.nodeValue = `latency: ${average_latency} ms`;
+        }
+
+        let player = dashjs.MediaPlayer().create();
+        if (abr_id > 1 && abr_id != 6) {
+            player.enablerlABR(true);
+        }
+        player.initialize(document.querySelector("#videoPlayer"), url, true);
+
+        if (abr_id == 6) { //BOLA
+            player.enableBufferOccupancyABR(true);
+        }
+
+        player.setAbrAlgorithm(abr_id);
+        player.setLatencyCallback(latencyDisplayCallback);
+
+    </script>
+</body>
+
+</html>
