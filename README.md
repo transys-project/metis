@@ -1,6 +1,8 @@
 # TranSys: Explaining Deep Learning-Based Networked Systems
 
-TranSys is an integrated explainer to provide post-hoc explanations for different types of Deep Learning (DL)-based networked systems. In the current stage, we provide the explanation methods and implementations for three DL-based networked systems:
+TranSys is an integrated explainer to provide post-hoc explanations for different types of Deep Learning (DL)-based networked systems. We refer the readers to [TranSys-TR.pdf](https://github.com/TranSys2020/TranSys/blob/master/TranSys-TR.pdf) for the technical report of this project.
+
+In the current stage, we provide the explanation methods and implementations for three DL-based networked systems:
 
 - Pensieve (`explain_pensieve`) is an adaptive video streaming algorithm based on deep reinforcement learning.
 - AuTO (`explain_auto`) is an on-switch traffic scheduler in datacenters (under refactoring).
@@ -15,3 +17,15 @@ We further provide several use cases of TranSys:
 The running scripts for explanation methods and use cases could be found in respective directories. Currently we are still working on documentating and refactoring the repository. Other codes will be released very soon. 
 
 For any questions, please post an issue or send an email to [contact@transys.io](mailto:contact@transys.io).
+
+## Release Progress
+| Directory | Date |
+| - | - |
+| `explain_pensieve` | Sep-22-2019 |
+| `explain_auto` | In progress |
+| `explain_routenet` | Sep-23-2019 |
+| `case_1` | In progress |
+| `case_2` | Nov-20-2019 |
+| `case_3` | Oct-31-2019 |
+
+We anticipate all codes to be released before Dec-31-2019. Please stay tuned!
