@@ -22,6 +22,7 @@ We provide the video information in `video/`, where each file records the chunk 
 
 ### DNN Model
 We provide the pre-trained DNN model at `models/pretrain_linear_reward.ckpt`. You can follow the instructions in the original Pensieve repository to train your own DNN model.
+If you would like to use your own DNN model, you can modify `model_path` in `main.py` #L28. 
 
 ## Generate a decision tree with given data traces 
 
