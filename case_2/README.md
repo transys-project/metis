@@ -24,8 +24,8 @@ grunt
 
 - Convert the `DecisionTreeClassifier` into JavaScript codes with sklearn-porter (https://github.com/nok/sklearn-porter).
 - Replace the JS codes in `dash.js/src/streaming/controllers/ViperDecisionTree.js` with the converted JS codes.
-- Run the Gruntfile to generate a new `dash.all.min.js`.
-- Put the `dash.all.min.js` to `./video_server`.
+- Run the Gruntfile under `dash.js/` to generate a new `dash.all.min.js`. Note that you may need to add the `--force` option to ignore spelling warnings. 
+- The `dash.all.min.js` could be found at `dash.js/dist/`. Put the `dash.all.min.js` to `./video_server`.
 - Move the `./video_server/` to `/var/www/html/`.
 - Visit the `http://localhost/myindex_XX.html` (XX should be the name of the ABR). The memory and latency statistics will be displayed on the web page.
 
