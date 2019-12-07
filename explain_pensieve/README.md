@@ -2,10 +2,10 @@
 
 ## Prerequisites
 ### Dependencies
-Install required dependencies:
+Install required dependencies (tested under Python 3.7.4):
 
 ``
-pip install python==3.7.4 numpy==1.17.2 tensorflow==1.14.0 tflearn==0.3.2 scikit-learn==0.21.3 pydotplus==2.0.2
+pip install numpy==1.17.2 tensorflow==1.14.0 tflearn==0.3.2 scikit-learn==0.21.3 pydotplus==2.0.2
 ``
 
 ### Traces
