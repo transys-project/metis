@@ -28,4 +28,17 @@ For any questions, please post an issue or send an email to [contact@transys.io]
 | `case_2` | Nov-20-2019 |
 | `case_3` | Oct-31-2019 |
 
-We anticipate all codes to be released before Dec-31-2019. Please stay tuned!
+We anticipate all codes to be released soon. Please stay tuned!
+
+## Citation
+
+```
+@article{meng2019transys,
+  title =   {Explaining Deep Learning-Based Networked Systems},
+  author =  {Meng, Zili and Wang, Minhu and Xu, Mingwei and Mao, Hongzi and Bai, Jiasong and Hu, Hongxin},
+  journal = {arXiv preprint arXiv:1910.03835},
+  pdf =     {https://arxiv.org/pdf/1910.03835.pdf},
+  url =     {https://arxiv.org/abs/1910.03835},
+  year =    {2019}
+}
+```
