@@ -1,6 +1,6 @@
 # TranSys: Explaining Deep Learning-Based Networked Systems
 
-TranSys is an integrated explainer to provide post-hoc explanations for different types of Deep Learning (DL)-based networked systems. We refer the readers to [TranSys-TR.pdf](https://github.com/TranSys2020/TranSys/blob/master/TranSys-TR.pdf) for the technical report of this project.
+TranSys is an integrated explainer to provide post-hoc explanations for different types of Deep Learning (DL)-based networked systems. We refer the readers to the [technical report](https://transys.io/TranSys-TR.pdf) for more details.
 
 In the current stage, we provide the explanation methods and implementations for three DL-based networked systems:
 
@@ -33,12 +33,11 @@ We anticipate all codes to be released soon. Please stay tuned!
 ## Citation
 
 ```
-@article{meng2019transys,
+@article{anon2019transys,
   title =   {Explaining Deep Learning-Based Networked Systems},
-  author =  {Meng, Zili and Wang, Minhu and Xu, Mingwei and Mao, Hongzi and Bai, Jiasong and Hu, Hongxin},
-  journal = {arXiv preprint arXiv:1910.03835},
-  pdf =     {https://arxiv.org/pdf/1910.03835.pdf},
-  url =     {https://arxiv.org/abs/1910.03835},
+  author =  {Anonymous Authors},
+  journal = {Technical Report},
+  url =     {https://transys.io/tranSys-TR.pdf},
   year =    {2019}
 }
 ```
