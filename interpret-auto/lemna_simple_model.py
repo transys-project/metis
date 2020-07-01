@@ -97,7 +97,7 @@ class MixtureLinearRegressionModel:
             self.pi_[:, i] = len(pointRange) / self.numSample
             self.sigma_[:, i] = np.mean(
                 (self.y[pointRange] - linear_reg.predict(self.X[pointRange]))
-                **2)
+                ** 2)
             self.model.append(linear_reg)
 
     def predict(self, row):
