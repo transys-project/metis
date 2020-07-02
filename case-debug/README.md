@@ -19,6 +19,8 @@ python mahimahi_gen.py --bw 3000
 ```
 indicating generate traces with a constant bandwidth of 3000kbps.
 
+For long videos (the 1000s video), due to the file size, they can be obtained at [this link](https://github.com/transys-project/pitree-dataset/tree/master/video_long). For convenient downloading, we also provide all links of video-related files in `links.txt`.
+
 ## Oversampling Fix
 
 ```
