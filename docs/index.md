@@ -1,6 +1,45 @@
+<center>
+<a href="https://zilimeng.com"><b>Zili Meng</b></a>, 
+<a href="http://routing.netlab.edu.cn/tiki-index.php?page=Minhu+Wang"><b>Minhu Wang</b></a>,
+<a href="#"><b>Jiasong Bai</b></a>, 
+<a href="http://routing.netlab.edu.cn/tiki-index.php?page=Mingwei+Xu"><b>Mingwei Xu</b></a>, 
+<a href="https://people.csail.mit.edu/hongzi/"><b>Hongzi Mao</b></a>, 
+<a href="https://people.cs.clemson.edu/~hongxih/"><b>Hongxin Hu</b></a>, 
+      
+</center>
+
+<center>Tsinghua University, MIT and Clemson University</center>
+
+
+
 ## Abstract
 
-While many deep learning (DL)-based networking systems have demonstrated superior performance, the underlying Deep Neural Networks (DNNs) remain blackboxes and stay uninterpretable for network operators. The lack of interpretability makes DL-based networking systems prohibitive to deploy in practice. In this paper, we propose Metis, a framework that provides interpretability for two general categories of networking problems spanning local and global control. Accordingly, Metis introduces two different interpretation methods based on decision tree and hypergraph, where it converts DNN policies to interpretable rule-based controllers and highlight critical components based on analysis over hypergraph. We evaluate Metis over several state-of-the-art DL-based networking systems and show that Metis provides human-readable interpretations while preserving nearly no degradation in performance. We further present four concrete use cases of Metis, showcasing how Metis helps network operators to design, debug, deploy, and ad-hoc adjust DL-based networking systems.
+While many deep learning (DL)-based networking systems have demonstrated superior performance, the underlying Deep Neural Networks (DNNs) remain blackboxes and stay uninterpretable for network operators. The lack of interpretability makes DL-based networking systems prohibitive to deploy in practice. In this paper, we propose Metis, a framework that provides interpretability for two general categories of networking problems spanning local and global control. Accordingly, Metis introduces two different interpretation methods based on decision tree and hypergraph, where it converts DNN policies to interpretable rule-based controllers and highlight critical components based on analysis over hypergraph. We evaluate Metis over two categories of state-of-the-art DL-based networking systems and show that Metis provides human-readable interpretations while preserving nearly no degradation in performance. We further present four concrete use cases of Metis, showcasing how Metis helps network operators to design, debug, deploy, and ad-hoc adjust DL-based networking systems.
+
+## Paper
+
+### Interpreting Deep Learning-Based Networking Systems
+
+Zili Meng, Minhu Wang, Jiasong Bai, Mingwei Xu, Hongzi Mao, Hongxin Hu<br />Proceedings of the 2020 ACM SIGCOMM Conference<br />[[PDF]](https://zilimeng.com/papers/metis-sigcomm20.pdf)
+
+### Citation
+
+```
+@inproceedings{meng2020interpreting,
+  title={Interpreting Deep Learning-Based Networking Systems},
+  author={Meng, Zili and Wang, Minhu and Bai, Jiasong and Xu, Mingwei and Mao, Hongzi and Hu, Hongxin},
+  booktitle={Proc. ACM SIGCOMM},
+  year={2020}
+}
+```
+
+## Code
+
+[[Code]](https://github.com/transys-project/metis/)
+
+## Supporters
+
+The research is supported by the National Natural Science Foundation of China (No. 61625203 and 61832013), and the National Key R&D Program of China (No. 2017YFB0801701). 
 
 ## Contact
 For any questions, please send an email to [zilim@ieee.org](mailto:zilim@ieee.org).

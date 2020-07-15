@@ -22,10 +22,10 @@ For any questions, please post an issue or send an email to [zilim@ieee.org](mai
 ## Citation
 
 ```
-@article{meng2019interpreting,
+@inproceedings{meng2020interpreting,
   title={Interpreting Deep Learning-Based Networking Systems},
   author={Meng, Zili and Wang, Minhu and Bai, Jiasong and Xu, Mingwei and Mao, Hongzi and Hu, Hongxin},
-  journal={arXiv preprint arXiv:1910.03835},
-  year={2019}
+  booktitle={Proc. ACM SIGCOMM},
+  year={2020}
 }
 ```
