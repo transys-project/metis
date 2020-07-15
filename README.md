@@ -4,9 +4,9 @@ Metis is an integrated explainer to provide post-hoc interpretation for differen
 
 In the current stage, we provide the interpretation methods and implementations for three DL-based networking systems:
 
-- Pensieve (`interpret-pensieve`) is an adaptive video streaming algorithm based on deep reinforcement learning.
-- AuTO (`interpret-auto`) is an on-switch traffic scheduler in datacenters (under refactoring).
-- RouteNet (`interpret-routenet`) is an SDN traffic optimizer to find routes for all src-dst pairs.
+- Pensieve (`interpret-pensieve`) is an adaptive video streaming algorithm based on deep reinforcement learning. The source codes of Pensieve are available at [https://github.com/hongzimao/pensieve](https://github.com/hongzimao/pensieve).
+- AuTO (`interpret-auto`) is an on-switch traffic scheduler in datacenters (under refactoring). The source codes of AuTO are available at [https://bitbucket.org/JustinasLingys/auto_sigcomm2018](https://bitbucket.org/JustinasLingys/auto_sigcomm2018).
+- RouteNet (`interpret-routenet`) is an SDN traffic optimizer to find routes for all src-dst pairs. The source codes of RouteNet are available at [https://github.com/knowledgedefinednetworking/demo-routenet](https://github.com/knowledgedefinednetworking/demo-routenet).
 
 We further provide four use cases of Metis:
 
