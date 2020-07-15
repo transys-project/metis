@@ -1,16 +1,3 @@
-<center>
-<a href="https://zilimeng.com"><b>Zili Meng</b></a>, 
-<a href="http://routing.netlab.edu.cn/tiki-index.php?page=Minhu+Wang"><b>Minhu Wang</b></a>,
-<a href="#"><b>Jiasong Bai</b></a>, 
-<a href="http://routing.netlab.edu.cn/tiki-index.php?page=Mingwei+Xu"><b>Mingwei Xu</b></a>, 
-<a href="https://people.csail.mit.edu/hongzi/"><b>Hongzi Mao</b></a>, 
-<a href="https://people.cs.clemson.edu/~hongxih/"><b>Hongxin Hu</b></a>, 
-      
-</center>
-
-<center>Tsinghua University, MIT and Clemson University</center>
-
-
 
 ## Abstract
 
