@@ -7,7 +7,7 @@ While many deep learning (DL)-based networking systems have demonstrated superio
 
 ### Interpreting Deep Learning-Based Networking Systems
 
-Zili Meng, Minhu Wang, Jiasong Bai, Mingwei Xu, Hongzi Mao, Hongxin Hu<br />Proceedings of the 2020 ACM SIGCOMM Conference<br />[[PDF]](https://zilimeng.com/papers/metis-sigcomm20.pdf)
+Zili Meng, Minhu Wang, Jiasong Bai, Mingwei Xu, Hongzi Mao, Hongxin Hu<br>Proceedings of the 2020 ACM SIGCOMM Conference<br>[[PDF]](https://zilimeng.com/papers/metis-sigcomm20.pdf)
 
 ### Citation
 
@@ -19,6 +19,12 @@ Zili Meng, Minhu Wang, Jiasong Bai, Mingwei Xu, Hongzi Mao, Hongxin Hu<br />Proc
   year={2020}
 }
 ```
+
+## Videos
+
+[SIGCOMM video (20min version, with subtitles)](https://youtu.be/J0QkGT4lrvI)<br>
+[Talk at the APNet Workshop 2020](https://youtu.be/5QvyweOzyro?t=23746)<br>
+[Topic preview given by Keith Winstein](https://youtu.be/5VtWWG_a1sk?t=1793)
 
 ## Code
 
