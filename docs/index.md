@@ -26,9 +26,14 @@ Zili Meng, Minhu Wang, Jiasong Bai, Mingwei Xu, Hongzi Mao, Hongxin Hu<br>Procee
 [Talk at the APNet Workshop 2020](https://youtu.be/5QvyweOzyro?t=23746)<br>
 [Topic preview given by Keith Winstein](https://youtu.be/5VtWWG_a1sk?t=1793)
 
+## Slides
+
+[Presentation Slides (.pptx, better played with Windows and Office 2019+)](metis-sigcomm20-slides.pptx)<br>
+[Presentation Slides (.pptx, compatible version for Mac users)](metis-sigcomm20-slides-compatible.pptx)
+
 ## Code
 
-[[Code]](https://github.com/transys-project/metis/)
+[GitHub](https://github.com/transys-project/metis/)
 
 ## Supporters
 
