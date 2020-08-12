@@ -23,6 +23,7 @@ Zili Meng, Minhu Wang, Jiasong Bai, Mingwei Xu, Hongzi Mao, Hongxin Hu<br>Procee
 ## Videos
 
 [SIGCOMM video (20min version, with subtitles)](https://youtu.be/J0QkGT4lrvI)<br>
+[SIGCOMM video (10min version, with subtitles)](https://youtu.be/MJjX7oUpSkE)<br>
 [Talk at the APNet Workshop 2020](https://youtu.be/5QvyweOzyro?t=23746)<br>
 [Topic preview given by Keith Winstein](https://youtu.be/5VtWWG_a1sk?t=1793)
 
