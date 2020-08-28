@@ -43,27 +43,28 @@ class DQNPolicy:
         # todo: compute q values from critic networks
 
         # states -> [470, 6], q_values [470*6, 1]
-        # 1. Get a copy of Environment
-        env_copy = copy.deepcopy(self.env)
+        # # 1. Get a copy of Environment
+        # env_copy = copy.deepcopy(self.env)
 
-        # 2. Get action according to states, states + action -> next_states
-        trace = get_rollouts(env=env_copy, policy=self, n_batch_rollouts=self.n_batch_rollouts,
-                             parameters=self.parameters, is_student=False)
-        rewards = [reward for _, _, reward, _, _ in trace]
-        rewards = np.array(rewards).reshape((len(rewards), 1))
+        # # 2. Get action according to states, states + action -> next_states
+        # trace = get_rollouts(env=env_copy, policy=self, n_batch_rollouts=self.n_batch_rollouts,
+        #                      parameters=self.parameters, is_student=False)
+        # rewards = [reward for _, _, reward, _, _ in trace]
+        # rewards = np.array(rewards).reshape((len(rewards), 1))
 
-        next_v_states = [obs for obs, _, _, _, _ in trace]
-        next_v_values = self.critic.predict(next_v_states)
+        # next_v_states = [obs for obs, _, _, _, _ in trace]
+        # next_v_values = self.critic.predict(next_v_states)
 
-        q_values = np.tile(next_v_values, (len(self.parameters['VIDEO_BIT_RATE']), 1)) + np.tile(rewards, (len(self.parameters['VIDEO_BIT_RATE']), 1))
+        # q_values = np.tile(next_v_values, (len(self.parameters['VIDEO_BIT_RATE']), 1)) + np.tile(rewards, (len(self.parameters['VIDEO_BIT_RATE']), 1))
 
-        v_values = self.critic.predict(states)
-        q_values = np.tile(v_values, (len(self.parameters['VIDEO_BIT_RATE']), 1))
+        # v_values = self.critic.predict(states)
+        # q_values = np.tile(v_values, (len(self.parameters['VIDEO_BIT_RATE']), 1))
 
-        # q_values = []
-        # for state in states:
-        #     action_prob = self.actor.predict(np.reshape(state, (1, self.parameters['S_INFO'], self.parameters['S_LEN'])))
-        #     for prob in action_prob[0] : q_values.append([np.log(prob)])
+        q_values = []
+        for state in states:
+            action_prob = self.actor.predict(np.reshape(state, (1, self.parameters['S_INFO'], self.parameters['S_LEN'])))
+            # for prob in action_prob[0] : q_values.append([np.log(prob)])
+            q_values.append(action_prob[0])
         # assert(len(q_values) == 470 * 6)
 
         return q_values
