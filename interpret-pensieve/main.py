@@ -106,6 +106,8 @@ def learn_dt(leaf_nodes):
         save_dt_policy_viz(student, save_dirname, save_viz_fname, feature_names=feature_names)
     else:
         student = load_dt_policy(save_dirname, save_fname)
+        save_dt_policy_viz(student, save_dirname, save_viz_fname, feature_names=feature_names)
+    
 
     # Test student
     rew = test_policy(env, student, n_test_rollouts, parameters)

@@ -333,3 +333,4 @@ ASALocalRun/
 pensieve/decision_tree
 
 .vscode/
+interpret-pensieve/cooked_traces/

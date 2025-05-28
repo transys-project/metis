@@ -1,3 +1,6 @@
+conda activate metis
+pip install networkx pandas graphviz
+
 rm -r models && rm explain_sample.tfrecords
 
 python routenet_with_link_cap_explain.py train \

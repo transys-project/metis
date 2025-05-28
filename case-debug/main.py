@@ -14,13 +14,13 @@
 
 import sys
 from rl import *
-# from dqn import *
+from dqn import *
 from dt import *
 from log import *
 from pensieve_viper_env import *
 from load_trace import *
 
-TRAIN_TRACES = './cooked_new_traces/'
+TRAIN_TRACES = '../interpret-pensieve/cooked_traces/'
 
 def learn_dt(argv):
     leaf_nodes = argv[1]
@@ -29,12 +29,12 @@ def learn_dt(argv):
 
     # parameters
     log_fname = './pensieve_dt.log'
-    model_path = './models/pretrain_linear_reward.ckpt'
+    model_path = '../interpret-pensieve/models/pretrain_linear_reward.ckpt'
     max_depth = None
     n_batch_rollouts = 10
     max_samples = 200000
     max_iters = 100
-    train_frac = 08
+    train_frac = 0.8
     is_reweight = False
     n_test_rollouts = 50
     save_dirname = './decision_tree/oversample'
@@ -57,7 +57,7 @@ def learn_dt(argv):
     parameters['PACKET_SIZE'] = 1500  # bytes
     parameters['NOISE_LOW'] = 0.9
     parameters['NOISE_HIGH'] = 1.1
-    parameters['VIDEO_SIZE_FILE'] = './pensieve/pensieve_test/video_size_'
+    parameters['VIDEO_SIZE_FILE'] = '../interpret-pensieve/video/video_size_'
     parameters['S_INFO'] = 6  # bit_rate, buffer_size, next_chunk_size, bandwidth_measurement(throughput and time), chunk_til_video_end
     parameters['S_LEN'] = 8  # take how many frames in the past
     parameters['A_DIM'] = 6
