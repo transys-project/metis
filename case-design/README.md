@@ -24,15 +24,15 @@ To make a comparison, a pretrained original model with 800k epochs is also given
 To test this modification model, run
 
 ``` bash
-cd $PENSIEVE_PATH
+cd pensieve
 cp -r test test_mod
 cd test_mod/
 python get_video_sizes.py
-cp $METIS_PATH/case-design/*.py .
-cp $METIS_PATH/case-design/models/* ./models/
+cp ../../*.py .
+cp ../../models/* ./models/
 python rl_no_training.py
 ```
 
-The result will be stored at `$PENSIEVE_PATH/test_mod/results` with `sim_mod_rl` scheme.
+The result will be stored at `pensieve/test_mod/results` with `sim_mod_rl` scheme.
 To plot the QoE line, run `python plot_results.py`.
-To compare with origin model, user can also store the origin results in `$PENSIEVE_PATH/test_mod/results`, modify the `SCHEMES` field in `plot_results.py` and run `python plot_results.py`.
+To compare with origin model, user can also store the origin results in `pensieve/test_mod/results`, modify the `SCHEMES` field in `plot_results.py` and run `python plot_results.py`.

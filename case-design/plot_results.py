@@ -126,16 +126,16 @@ def main():
 			log_file_all.append(l)
 			for scheme in SCHEMES:
 				reward_all[scheme].append(np.sum(raw_reward_all[scheme][l][1:VIDEO_LEN]))
-        
-        for scheme in SCHEMES:
-		rewards = np.array(reward_all[scheme])
-	        rewards_min = np.min(rewards)
-	        rewards_5per = np.percentile(rewards, 5)
-	        rewards_mean = np.mean(rewards)
-	        rewards_median = np.percentile(rewards, 50)
-	        rewards_95per = np.percentile(rewards, 95)
-	        rewards_max = np.max(rewards)
-	        print scheme, rewards_min, rewards_5per, rewards_mean, rewards_median, rewards_95per, rewards_max
+		
+		for scheme in SCHEMES:
+			rewards = np.array(reward_all[scheme])
+			rewards_min = np.min(rewards)
+			rewards_5per = np.percentile(rewards, 5)
+			rewards_mean = np.mean(rewards)
+			rewards_median = np.percentile(rewards, 50)
+			rewards_95per = np.percentile(rewards, 95)
+			rewards_max = np.max(rewards)
+			print(scheme, rewards_min, rewards_5per, rewards_mean, rewards_median, rewards_95per, rewards_max)
 
 	mean_rewards = {}
 	for scheme in SCHEMES:
